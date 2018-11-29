@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.FXMLDocumentController">
+   <children>
+      <Button fx:id="button" layoutX="155.0" layoutY="561.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="90.0" text="Start" />
+      <TextArea fx:id="log" editable="false" layoutX="15.0" layoutY="32.0" prefHeight="520.0" prefWidth="371.0" style="-fx-control-inner-background:#000000; -fx-text-fill: #ffffff;">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="173.0" layoutY="6.0" text="Server log" />
+   </children>
+</AnchorPane>

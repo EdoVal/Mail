@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="200.0" layoutY="88.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="userName" layoutX="18.0" layoutY="4.0" prefHeight="17.0" prefWidth="200.0" text="Nome utente" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ListView fx:id="mailList" layoutX="11.0" layoutY="24.0" prefHeight="524.0" prefWidth="214.0" />
+                  <Button layoutX="56.0" layoutY="559.0" mnemonicParsing="false" onAction="#handleSelect" text="Open selected Email" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="60.0" layoutY="99.0" orientation="VERTICAL" prefHeight="598.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="selectedMail" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="219.0" prefWidth="526.0" promptText="mail ricevuta" />
+                              <Button layoutX="14.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="95.0" text="Delete" />
+                              <Button fx:id="reply" layoutX="160.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="25.0" prefWidth="95.0" text="Reply" />
+                              <Button fx:id="replyall" layoutX="302.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleReplyAll" prefHeight="25.0" prefWidth="95.0" text="Reply All" />
+                              <Button fx:id="forward" layoutX="445.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleForward" prefHeight="25.0" prefWidth="95.0" text="Forward" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextField fx:id="receiver" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="526.0" promptText="destinatario/i" />
+                              <TextArea fx:id="body" layoutX="14.0" layoutY="81.0" prefHeight="164.0" prefWidth="526.0" promptText="corpo" />
+                              <TextField fx:id="subject" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="526.0" promptText="oggetto" />
+                              <Button fx:id="send" layoutX="230.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" text="Send" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
